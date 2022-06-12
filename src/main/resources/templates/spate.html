@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness | Club</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./class-details.html">Classes</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./team.html">Our Team</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="./about-us.html">About us</a></li>
+                        <li><a href="./class-timetable.html">Classes timetable</a></li>
+                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
+                        <li><a href="./team.html">Our team</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./blog.html">Our blog</a></li>
+                        <li><a href="./404.html">404</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a th:href="@{'/home'}"></a>
+                            <img src="/img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a th:href="@{'/home'}">Acasa</a></li>
+                            <li><a th:href="@{'/angajat/list'}">Echipa noastra</a></li>
+                            <li><a th:href="@{'/abonament/new'}">Abonamente</a></li>
+                            <li><a th:href="@{'/Nutritie'}">Nutritie</a></li>
+                            <li  class="active"><a th:href="@{'/Antrenamente'}">Antrenamente</a></li>
+                            <li><a th:href="@{'/constientizareCalorii'}">Constientizarea caloriilor</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/istoric/new'}">Contul Meu</a></li>
+                            <li><a th:href="@{'/produse/list'}">Produse</a></li>
+                            <li><a sec:authorize="hasAnyRole('ADMIN', 'ANG')" th:href="@{'/comanda/list'}">Comenzi</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/cos/list'}">Cos</a></li>
+                            <li ><a th:href="@{'/mesaj/new'}">Contact</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <h5 sec:authentication="name" style="color: white">User</h5>
+                        </div>
+                        <div class="to-social">
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="btn btn-danger" style="width: 10px;height: 30px"><i class="fa fa-sign-out"></i></button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Section Begin -->
+    <section class="blog-details-hero set-bg" data-setbg="/img/plan/spate.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="bh-text">
+                        <h3>Exercitii pentru spate</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero Section End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Tracțiunile la bară</h5>
+                            <p>Tracțiunile sunt un exercițiu foarte bun pentru a obține spate lat, sunt ușor de făcut și nu necesită prea mult echipament.Tot ce îți trebuie e o bară de tracțiuni și eventual o greutate, în cazul în care propria greutate nu este de ajuns.
+                            </p>
+							<img src="/img/plan/spate1.jpg" alt="" class="center">
+                        </div>
+    
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Ramat cu haltera</h5>
+                            <p>Ramatul cu haltera cere o atenție sporită pentru a evita accidentările.Poziția coloanei este totul aici, deci ține spatele drept.Te apleci aproape la un unghi de 90 de grade, îndoi puțin genunchii și apuci bara.
+                            </p>
+                        </div>
+                        <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate2.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="blog-details-desc">
+                            <p>Mișcarea este simplă, trebuie să ridici bara până aproape sub piept, contractând bine mușchii spatelui și făcând o mică pauză înainte de a coboră haltera și a repeta mișcarea.
+                            </p>
+                        </div>
+						
+						
+						
+						
+                        
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Ramat cu bara T – exercitii pentru spate</h5>
+                            <p>Un alt tip de ramat este acela cu bara T. Se ia o bară goală și se așează cu un capăt într-un colț al peretelui.În celălalt capăt se pune greutatea.
+                            </p>
+                        </div>
+                        <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate4.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="blog-details-desc">
+                            <p>Ai diferite opțiuni pentru priză.De exemplu, poți folosi priza cu prosopul (lucrează mai bine antebrațul) sau poți folosi priza simplă, cu palmele pe bară.
+							Din nou, poziția contează foarte mult pentru evitarea accidentelor.Ține spatele drept, aplecat la un unghi de aproape 90 de grade cu genunchii puțin îndoiți. Vei ridica bara ținând de capătul la care ai pus greutatea.
+                            </p>
+                        </div>
+						
+						
+						
+						
+                        
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Ramat cu gantere</h5>
+                            <p>Începe cu o ganteră în fiecare mână. Îndoaie genunchii puțin, la fel ca la ramatul cu haltera. Apleci spatele la un unghi de 90 de grade, ținându-l drept. Trunchiul ar trebui să fie paralel cu podeaua, iar brațele perpendiculare pe ea.
+							Ridici ganterele în timp ce spatele stă nemișcat. Contractarea spatelui și scurta pauză sunt foarte importante, deci nu le uita.
+                            </p>
+                        </div>
+                       <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate6.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate7.jpg" alt="">
+                            </div>
+                        </div>
+   
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Îndreptări cu haltera (deadlift)</h5>
+                            <p>Prinde o halteră cu palmele în poziție de pronație (îndreptate în jos), la o distanță egală cu cea a umerilor.Trebuie să faci mișcarea controlat pentru a evita accidentările.
+                            </p>
+                        </div>
+                          <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate8.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate9.jpg" alt="">
+                            </div>
+                        </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Ridicări ale umerilor cu gantera (Shrugs) </h5>
+                            <p>Se ia o ganteră în fiecare mână, și se ridică din umeri greutatea. Brațele trebuie să rămână drepte.
+
+								Acestea au fost 10 exerciții pe care le poți încerca data viitoare când lucrezi spatele.
+
+								După cum ai observat, forma în care execuți aceste exerciții este foarte importantă. Nu numai că te va ține la distanță de orice accidente nedorite, dar te va ajuta activând mai mult grupa de mușchii pe care încerci să o lucrezi, astfel vei putea obține rezultate mai bune.
+                            </p>
+                        </div>
+                         <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate10.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/spate11.jpg" alt="">
+                            </div>
+                        </div>
+                     
+						
+						
+						
+						
+                        
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				
+				
+						
+						
+						
+                        
+                
+				
+				
+				
+				
+            </div>
+        
+    </section>
+    <!-- Blog Details Section End -->
+
+
+   <!-- Footer Section Begin -->
+    <section class="footer-section">
+
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>
+  Copyright &copy;2022 All rights reserved FitnessClub <i class="fa fa-heart" aria-hidden="true"></i></a>
+ </p>
+                    </div>
+                </div>
+           
+       
+    </section>
+    <!-- Footer Section End -->
+
+
+
+<!-- Js Plugins -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/jquery.barfiller.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+</body>
+
+</html>

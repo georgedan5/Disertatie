@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness | Club</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a th:href="@{'/home'}">Acasa</a> </li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./class-details.html">Classes</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./team.html">Our Team</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="./about-us.html">About us</a></li>
+                        <li><a href="./class-timetable.html">Classes timetable</a></li>
+                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
+                        <li><a href="./team.html">Our team</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./blog.html">Our blog</a></li>
+                        <li><a href="./404.html">404</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a th:href="@{'/home'}"></a>
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class="active"><a th:href="@{'/home'}">Acasa</a></li>
+                            <li><a th:href="@{'/angajat/list'}">Echipa noastra</a></li>
+                            <li><a th:href="@{'/abonament/new'}">Abonamente</a></li>
+                            <li><a th:href="@{'/Nutritie'}">Nutritie</a></li>
+                            <li><a th:href="@{'/Antrenamente'}">Antrenamente</a></li>
+                            <li><a th:href="@{'/constientizareCalorii'}">Constientizarea caloriilor</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/istoric/new'}">Contul Meu</a></li>
+                            <li><a th:href="@{'/produse/list'}">Produse</a></li>
+                            <li><a sec:authorize="hasAnyRole('ADMIN', 'ANG')" th:href="@{'/comanda/list'}">Comenzi</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/cos/list'}">Cos</a></li>
+                            <li ><a th:href="@{'/mesaj/new'}">Contact</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <h5 sec:authentication="name" style="color: white">User</h5>
+                        </div>
+                        <div class="to-social">
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="btn btn-danger" style="width: 10px;height: 30px"><i class="fa fa-sign-out"></i></button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                
+            </div>
+           
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="/img/hero/hero-1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    
+                        <h1 style="color:white">Iubeste-ti corpul asa cum este sau intra in forma, daca nu iti place ce vezi!</h1>
+                        
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+	<!-- ChoseUs Section Begin -->
+    <section class="choseus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>De ce noi?</span><br/><br/>
+                    
+						<p>Misiunea Fitness Club este să ajutăm toți membrii din comunitatea noastră să obțină rezultatele pe care și le doresc, oferindu-le echipamentul și susținerea de care au nevoie. Ne dorim ca fiecare membru care pășește în clubul nostru să fie mai sănătos, mai fericit și mai relaxat. Fitness Club oferă o varietate de abonamente care cu siguranță se vor potrivit nevoilor și așteptărilor tale așa că te așteptăm să intri și tu în comunitatea noastră!
+						Fitness Club a fost creat ca un spațiu dedicat fitness-ului, dar și relaxării. Aici vei găsi oameni prietenoși, gata oricând să te ajute să-ți găsești antrenamentul sau clasa perfectă pentru tine.<p><br/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-034-stationary-bike"></span>
+                        <h4>Echipament modern</h4>
+                        <p>Găsești o gamă variată de aparate, de la gantere şi prese până la benzi de alergat şi biciclete eliptice aparate multifunționale și diverse accesorii.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-033-juice"></span>
+                        <h4>Planuri de nutritie</h4>
+                        <p>Nu ne plac dietele plictisitoare, ci planurile de alimentatie echilibrate care iti permit sa le urmezi pe termen lung si te lasa sa trisezi din cand in cand..</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-002-dumbell"></span>
+                        <h4>Antrenori personali</h4>
+                        <p>Antrenează-te cu antrenori de elită, aleși cu atenție, pentru a te ajuta să fii în formă cât mai repede și eficient.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-014-heart-beat"></span>
+                        <h4>Unic pentru nevoile tale</h4>
+                        <p>Credem că mișcarea este ingredientul “secret” pentru o viață mai bună și mai fericită..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+   
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>
+  Copyright &copy;2022 All rights reserved FitnessClub <i class="fa fa-heart" aria-hidden="true"></i></a>
+ </p>
+                    </div>
+                </div>
+           
+       
+    </section>
+    <!-- Footer Section End -->
+
+ 
+
+    <!-- Js Plugins -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
+    <script src="/js/jquery.barfiller.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness | Club</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./class-details.html">Classes</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./team.html">Our Team</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="./about-us.html">About us</a></li>
+                        <li><a href="./class-timetable.html">Classes timetable</a></li>
+                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
+                        <li><a href="./team.html">Our team</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./blog.html">Our blog</a></li>
+                        <li><a href="./404.html">404</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a th:href="@{'/home'}"></a>
+                            <img src="/img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a th:href="@{'/home'}">Acasa</a></li>
+                            <li><a th:href="@{'/angajat/list'}">Echipa noastra</a></li>
+                            <li><a th:href="@{'/abonament/new'}">Abonamente</a></li>
+                            <li><a th:href="@{'/Nutritie'}">Nutritie</a></li>
+                            <li class="active"><a th:href="@{'/Antrenamente'}">Antrenamente</a></li>
+                            <li><a th:href="@{'/constientizareCalorii'}">Constientizarea caloriilor</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/istoric/new'}">Contul Meu</a></li>
+                            <li><a th:href="@{'/produse/list'}">Produse</a></li>
+                            <li><a sec:authorize="hasAnyRole('ADMIN', 'ANG')" th:href="@{'/comanda/list'}">Comenzi</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/cos/list'}">Cos</a></li>
+                            <li ><a th:href="@{'/mesaj/new'}">Contact</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <h5 sec:authentication="name" style="color: white">User</h5>
+                        </div>
+                        <div class="to-social">
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="btn btn-danger" style="width: 10px;height: 30px"><i class="fa fa-sign-out"></i></button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Section Begin -->
+    <section class="blog-details-hero set-bg" data-setbg="/img/plan/tricepsx.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="bh-text">
+                        <h3>Exercitii pentru triceps</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero Section End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details-section spad">
+        <div class="container">
+
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5> Flotări diamant</h5>
+                            <p>Flotările diamant sunt destul de grele și provocatoare, chiar dacă folosești doar greutatea corporală. În schimb, acestea cresc foarte mult forța și masa tricepsului dacă sunt executate corect.
+
+							<br/>Din poziția de flotare apropii palmele până când se formează un triunghi între ele, dacă ești începător poate va trebui să le depărtezi mai mult pentru a putea face mișcarea deoarece tricepsul tău nu va putea să facă mișcarea. După ce te-ai pus în poziție, cobori încet corpul și îl ridici explosiv, pentru a dezvolta forța tricepsului
+                            </p>
+							<img src="/img/plan/triceps1.jpg" alt="" class="center">
+                        </div>
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Kickback cu gantera</h5>
+                            <p>Începe cu o ganteră în fiecare mână cu palmele îndreptate spre trunchi. Menține-ți spatele drept în timp ce îndoi puțin genunchii și te apleci în față din șold. Trunchiul trebuie să fie aproape paralele cu podeaua. Partea superioară a brațelor trebuie să fie aproape de trunchi și paralelă cu podeaua. Antebrațul trebuie să fie perpendicular cu podeaua în timp ce ții greutățile în mână. Trebuie să ai un unghi de 90 de grade între antebraț și partea superioară a brațului. Aceasta este poziția de start.
+							<br/>Acum, în timp ce ții partea superioară a brațelor nemișcată, expiră și folosește tricepsul pentru a ridica greutatea până când brațul este complet extins. Doar antebrațul trebuie să se miște.
+							<br/>Fă o scurtă pauză de câteva momente, inspiră și coboară încet greutatea până când ajungi cu ea în poziția de start.
+							<br/>Repetă până când atingi numărul dorit de repetări
+                            </p>
+							<img src="/img/plan/triceps2.jpg" alt="" class="center">
+                        </div>
+                       
+                        <div class="blog-details-desc">
+                            <p>Acest exercițiu se poate face și cu un singur braț o dată. Deasemenea, dacă preferi mișcare cu un singur braț, poți folosi scripetele montat jos cu un mâner atașat în locul unei gantere pentru o contracție mai bună a tricepsului în partea de sus a mișcării. În cazul acesta, palmele trebuie să fie orientate înainte (priză supinație) nu înspre trunchi (priză neutră).
+                            </p>
+                        </div>
+						
+						
+						
+						
+                        
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Extensii triceps cu gantera</h5>
+                            <p>Împinsul din înclinat cu gantere intră în topul exercițiilor preferate a multor culturiști. Principalul beneficiu al acestui exercițiu este că poți schimba unghiul în care faci mișcarea prin modificarea unghiului de înclinare al băncii. Astfel poți lucra pieptul mult mai eficient decât dacă ai avea o bancă fixă înclinată.
+                            </p>
+							
+							
+							<p>Acest exercițiu este printre primele pe care trebuie să le faci în antrenamentul tău, deoarece cu cât îl faci mai târziu cu atât mai puțină greutate vei putea împinge. Dacă chiar vrei să obții rezultate promițătoare, încearcă să rotești palmele puțin spre interior când ajungi cu ele sus.</p>
+                        </div>
+						    <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/triceps3.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/triceps4.jpg" alt="">
+                            </div>
+							</div>
+                      
+   
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Extensii la scripete cu funia</h5>
+                            <p>Acest exercițiu este unul de izolare, pentru că singura grupă de mușchi lucrată este tricepsul. Adesea văd cum unii fac acest exercițiu în cele mai oribile poziții, nu numai că nu au o formă corectă dar pun prea multă greutate și încep să folosească alte grupe de mușchi.
+
+							<br/>În primul trebuie să ți spatele drept, să nu pui o greutate prea mare la început pentru a te învăța cu forma corectă, iar singura mișcare trebuie să fie din cot, restul corpului trebuie să fie nemișcat. Crede-mă dacă faci exercițiul acesta corect cu o greutate  care în mod normal ți-ar părea o joacă, după primul set o să simți cum tricepsul arde.
+                            </p>
+                        </div>
+                          <div class="blog-details-pic">
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/triceps5.jpg" alt="">
+                            </div>
+                            <div class="blog-details-pic-item">
+                                <img src="/img/plan/triceps6.jpg" alt="">
+                            </div>
+							</div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Flotări la paralele</h5>
+                            <p>Pe lângă faptul că flotările la paralele sunt exercițiul meu preferat când vine vorba de triceps și piept, ele chiar solicită tricepșii, crescând atât masa cât și forța lor. În plus nu sunt greu de executat, trebuie doar să eviți balansul, să ți corpul într-o poziție fermă și să nu te apleci prea mult în față pentru că atunci sunt activați mai mult pieptul și umerii decât tricepșii.
+
+                            </p>
+						
+							<img src="/img/plan/triceps7.jpg" alt="" class="center">
+							<p>
+							<br/>Pentru a începe, apucă-te de bare și ridică-te astfel încât brațele să fie complet extinse iar corpul să fie perpendicular cu podeaua. Aceasta este poziția de start.
+							<br/>Acum, inspiră și coboară-ți corpul încet îndoind coatele. Trunchiul tău trebuie să rămână drept iar coatele trebuie să fie aproape de el. Astfel te vei concentra mai mult pe activarea tricepsului.
+							<br/>Coboară până când antebrațul și partea superioară a brațului formează un unghi de 90 de grade.
+							<br/>Apoi, expiră și împinge-ți trunchiul folosind tricepsul până ajungi din nou în poziția de start.
+							<br/>Repetă până când atingi numărul de repetări dorite
+							</p>
+                        </div>
+                       
+
+                           
+                        </div>
+                    </div>
+                </div>
+
+				
+            </div>
+        
+    </section>
+    <!-- Blog Details Section End -->
+
+
+   <!-- Footer Section Begin -->
+    <section class="footer-section">
+
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>
+  Copyright &copy;2022 All rights reserved FitnessClub <i class="fa fa-heart" aria-hidden="true"></i></a>
+ </p>
+                    </div>
+                </div>
+           
+       
+    </section>
+    <!-- Footer Section End -->
+
+
+
+<!-- Js Plugins -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/jquery.barfiller.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness | Club</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .footer h3{
+        color:white;
+        font-weight: bold;  }
+    .topnav-centered h3 {
+        float: none;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #dddddd;
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        left:50%;
+        top: 10%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        margin-top: 1%;
+    }
+
+</style>
+
+
+<div class="container-fluid">
+    <div class="bg-image"
+         style="background-image: url('https://vpnpro.com/wp-content/uploads/Access-denied-website-bypass.jpg');
+            height: 100vh;  background-position: center; background-repeat: no-repeat; background-size:cover;">
+    </div>
+
+
+    <div class="container-fluid" style="margin-top: 20px">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 vertical-center">
+                <div class="pannel-group">
+                    <div class="panel panel-primary">
+
+
+                        <div class="alert alert-danger" align="center">
+                            <strong><label th:text="'Nu aveti drepturi de acces la aceasta pagina.Va rugam sa reveniti la pagina anterioara!'"> asd</label></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+
+        <div class="col-lg-12 text-center">
+            <div class="copyright-text">
+                <p>
+                    Copyright &copy;2022 All rights reserved FitnessClub <i class="fa fa-heart" aria-hidden="true"></i></a>
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Footer Section End -->
+
+
+
+    <!-- Js Plugins -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/masonry.pkgd.min.js"></script>
+    <script src="/js/jquery.barfiller.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+
+
+
+    </body>
+</html>

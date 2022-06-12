@@ -1,0 +1,47 @@
+.leave-comment.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px auto;
+    max-width: 500px;
+}
+
+.register h2 {
+    color: white;
+    padding-bottom: 24px;
+}
+.register select {
+    background: transparent;
+    color: #c4c4c4;
+    padding-left: 20px;
+    padding-right: 5px;
+    height: 46px;
+    border: 1px solid #363636;
+    margin-bottom: 20px;
+    font-size: 13px;
+    width: 100%;
+}
+.register select *{
+    background: black;
+    color: #c4c4c4;
+    padding-left: 20px;
+    padding-right: 5px;
+    height: 46px;
+    border: 1px solid #363636;
+    margin-bottom: 20px;
+    font-size: 13px;
+    width: 100%;
+}
+.login-btn {
+    padding: 20px 0;
+}
+.login-btn a {
+    color: #f36100;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+.login-btn a:hover {
+    color: white;
+
+}

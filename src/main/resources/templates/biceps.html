@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fitness | Club</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about-us.html">About Us</a></li>
+                <li><a href="./class-details.html">Classes</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./team.html">Our Team</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="./about-us.html">About us</a></li>
+                        <li><a href="./class-timetable.html">Classes timetable</a></li>
+                        <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
+                        <li><a href="./team.html">Our team</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./blog.html">Our blog</a></li>
+                        <li><a href="./404.html">404</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a th:href="@{'/home'}"></a>
+                            <img src="/img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a th:href="@{'/home'}">Acasa</a></li>
+                            <li><a th:href="@{'/angajat/list'}">Echipa noastra</a></li>
+                            <li><a th:href="@{'/abonament/new'}">Abonamente</a></li>
+                            <li><a th:href="@{'/Nutritie'}">Nutritie</a></li>
+                            <li class="active"><a th:href="@{'/Antrenamente'}">Antrenamente</a></li>
+                            <li><a th:href="@{'/constientizareCalorii'}">Constientizarea caloriilor</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/istoric/new'}">Contul Meu</a></li>
+                            <li><a th:href="@{'/produse/list'}">Produse</a></li>
+                            <li><a sec:authorize="hasAnyRole('ADMIN', 'ANG')" th:href="@{'/comanda/list'}">Comenzi</a></li>
+                            <li><a sec:authorize="hasRole('ROLE_USER')" th:href="@{'/cos/list'}">Cos</a></li>
+                            <li ><a th:href="@{'/mesaj/new'}">Contact</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <h5 sec:authentication="name" style="color: white">User</h5>
+                        </div>
+                        <div class="to-social">
+                            <form th:action="@{/logout}" method="post">
+                                <button type="submit" class="btn btn-danger" style="width: 10px;height: 30px"><i class="fa fa-sign-out"></i></button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Details Hero Section Begin -->
+    <section class="blog-details-hero set-bg" data-setbg="/img/plan/biceps.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="bh-text">
+                        <h3>Exercitii pentru biceps</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero Section End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details-section spad">
+        <div class="container">
+
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5> Flexii cu bara Z</h5>
+                            <p>Poate nu sunt cei mai mari și mai puternici mușchi din corpul tău, dar bicepșii sunt „preferații” tuturora.De exemplu când vezi pe cineva care a făcut sală pentru o vreme, nu te uiți din prima la picioarele lui, ci la mărimea bicepsului.
+							</p>
+							<p>
+							<img src="/img/plan/biceps1.jpg" alt="" class="center">
+										<br/>Stai drept în timp ce ții o bară Z cu priza largă. Palmele ar trebui să fie îndreptate în față, puțin înclinate datorită formei barei. Menține coatele aproape de trunchi. Această este poziția de start.
+									<br/>Acum, ținând partea superioară a brațelor nemișcată,  expiră și ridică bara înainte în timp ce contractezi bicepsul. Concentrează-te doar pe deplasarea antebrațului, încheietura trebuie să fie fixă pentru a lăsa bicepsul să facă toată treaba.
+									<br/>Continuă să ridici bara până când aceasta ajunge la nivelul umerilor. Fă o pauză de câteva momente și menține poziția de contracție a bicepsului.
+									<br/>Apoi expiră și coboară încet bara până ajungi cu ea în poziția de start.
+									<br/>Repetă până când atingi numărul dorit de repetări
+                            </p>
+                        </div>
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Flexii înclinate cu gantera</h5>
+                            <p>Acest exercițiu se execută pe o bancă înclinată la un un unghi de 45 de grade, care întinde mai mult capul lung al tricepsului, astfel obținându-se o activare mai bună. Poți face flexiile alternate, dar cele mai eficiente sunt cele concomitente.
+							Poți face 3 serii a câte 10 repetări concomitente, sau dacă alegi să le faci alternate vor fi 20 de repetări, 10 de fiecare parte.Pauză între 60-90 de secunde.
+							
+                            </p>
+							<img src="/img/plan/biceps2.jpg" alt="" class="center">
+                        </div>
+                       
+                        <div class="blog-details-desc">
+                            <p>Stai pe o bancă înclinată la un unghi de 45 de grade cu ganterele în mână. Menține coatele aproape de trunchi. Aceasta este poziția de pornire.
+							<br/>Ținând partea superioară a brațului nemișcată, ridică gantera din mâna dreaptă prin flexare contractând bicepsul și expirând. În timp ce faci asta, răsucește încheietura palmei până când aceasta este îndreptată în față. Continuă mișcarea până când bicepsul este contractat complet iar gantera ajunge la nivelul umerilor. <br/>Menține poziția pentru câteva momente încordând bine bicepsul. Sfat: doar antebrațul ar trebui să se miște, partea superioară a brațelor și cotul trebuie să fie fixe.
+							<br/>Coboară încet și controlat gantera până când ajungi cu ea în poziția de pornire.
+							<br/>Repetă mișcarea cu mâna opusă. Aceasta înseamnă o repetare.
+							<br/>Execută numărul dorit de repetări.
+                            </p>
+                        </div>
+						
+						
+						
+						
+                        
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Flexii la banca Scott </h5>
+                            <p>Se folosește tot bara Z, sau chiar gantere dacă dorești.Nu trebuie să folosești o greutate prea mare, deoarece este un exercițiu de izolare.Mișcarea trebuie să fie una controlată, cea de coborâre (negativă) trebuie să fie lentă.
+							Din nou 3 seturi a câte 15 repetări cu pauze de 30-60 secunde.
+                            </p>
+							
+							<img src="/img/plan/biceps3.jpg" alt="" class="center">
+							<p>Pentru a executa flexii cu gantera la banca Scott trebuie să apucați o ganteră într-o mână și să plasați partea superioară a brațului pe banca Scott sau pe banca înclinată. Gantera ar trebui să fie la nivelul umărului. Aceasta este poziția de pornire.
+							<br/>În timp ce inspirați, coborâți încet gantera până când brațul este aproape extins. Nu extinde-ți complet brațul pentru a menține tensiunea pe biceps.
+							<br/>Expirând, ridicați gantera până la nivelul umărului prin flexare contractând bine bicepsul. Pentru a activa mai bine bicepsul, încercați să rotiți încheietura palmei ridicând degetul mic mai sus față de degetul mare.  Contractă bine bicepsul pentru câteva momente și repetă mișcarea până când numărul dorit de repetări este atins.
+							<br/>Schimbați brațele și repetați mișcarea.</p>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Flexii cu haltera</h5>
+                            <p>Fără îndoială acesta este exercițiul care solicită bicepsul cel mai mult, punându-l la muncă. Însă bicepsul trebuie să facă toată treaba, deci scade greutatea și concentrează-te pe formă, pe mișcare, care dacă o vei face corectă va da rezultatele dorite.
+
+							
+                            </p>
+							
+							<img src="/img/plan/biceps4.jpg" alt="" class="center">
+							<p>Stai în picioare cu trunchiul drept în timp ce ții o halteră în mâini cu priza aproximativ egală cu distanța dintre umeri. Palmele mâinilor ar trebui să fie îndreptate înainte iar coatele trebuie să stea nemișcate lângă trunchi. Aceasta va fi poziția de pornire.
+							<br/>În timp ce ți partea superioară a brațelor și coatele nemișcate, ridică haltera prin flexare în timp ce contractezi bicepsul și expiri. Doar antebrațele trebuie să se miște, încheietura palmelor trebuie să fie stabilă și nemișcată pentru a pune accentul pe biceps și nu pe antebraț.
+							<br/>Continuă mișcarea până când bicepsul este contractat la maxim iar bara ajunge la nivelul umerilor. Menține poziția pentru câteva momente în timp ce încordezi bine bicepsul.
+							<br/>Coboară încet și controlat haltera în timp ce inspiri până când ajungi cu ea în poziția de pornire.
+							<br/>Repetă până când atingeți numărul de repetări dorite.</p>
+							
+							
+                        </div>
+                       
+
+                           
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				<div class="row">
+                <div class="col-lg-8 p-0 m-auto">
+                    <div class="blog-details-text">
+                        <div class="blog-details-title">
+                            
+                            <h5>Tracțiunile la bară cu priza scurtă</h5>
+                            <p>Probabil că te întrebi ce caută un exercițiu pentru spate aici, când noi vorbim de bicepși.Permite-mi să te luminez.
+								Tracțiunile sunt un exercițiu care lucrează spatele și bicepsul.Cu cât priza este mai largă cu atât spatele este lucrat mai mult.Cu cât priza este mai scurtă, cu atât bicepsul este activat mai mult.Simplu, nu?
+								De aceea am spus „priză scurtă”, defapt atât de scurtă încât mâinile tale aproape se vor atinge.
+								Poți face acest exercițiu la final, pur și simplu până la eșec.
+                            </p>
+						
+							<img src="/img/plan/biceps5.jpg" alt="" class="center">
+							
+                        </div>
+                       
+
+                           
+                        </div>
+                    </div>
+                </div>
+
+				
+            </div>
+        
+    </section>
+    <!-- Blog Details Section End -->
+
+
+   <!-- Footer Section Begin -->
+    <section class="footer-section">
+
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>
+  Copyright &copy;2022 All rights reserved FitnessClub <i class="fa fa-heart" aria-hidden="true"></i></a>
+ </p>
+                    </div>
+                </div>
+           
+       
+    </section>
+    <!-- Footer Section End -->
+
+
+
+<!-- Js Plugins -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/jquery.barfiller.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+</body>
+
+</html>
