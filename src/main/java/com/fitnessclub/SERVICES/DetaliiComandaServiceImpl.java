@@ -37,7 +37,7 @@ public class DetaliiComandaServiceImpl implements DetaliiComandaService {
 
         List<Detalii_comanda> ccc=new LinkedList<>();
         detaliiComandaRepository.findAll().iterator().forEachRemaining(ccc::add);
-        log.info("Metoda findAll din CosRepository a fost apelata! ");
+        log.info("Metoda findAll din ComandaRepository a fost apelata! ");
 
 
         return detaliiComandaRepository.findAll(pageable);
@@ -52,9 +52,9 @@ public class DetaliiComandaServiceImpl implements DetaliiComandaService {
     public Detalii_comanda findById(long id) {
         Optional<Detalii_comanda> ok=detaliiComandaRepository.findById(id);
         if(!ok.isPresent()){
-            throw new ResourceNotFoundException("Cosul nu exista!");
+            throw new ResourceNotFoundException("Comanda nu exista!");
         }
-        log.info("Metoda findById din CosRepository a fost apelata pentru  id-ul:"+id);
+        log.info("Metoda findById din ComandaRepository a fost apelata pentru  id-ul:"+id);
 
         return ok.get();
 
@@ -63,7 +63,7 @@ public class DetaliiComandaServiceImpl implements DetaliiComandaService {
     @Override
     public Detalii_comanda save(Detalii_comanda detalii_comanda) {
         Detalii_comanda saveddc=detaliiComandaRepository.save(detalii_comanda);
-        log.info("Metoda save din CosRepository a fost apelata pentru produsul:"+detalii_comanda.getId());
+        log.info("Metoda save din ComandaRepository a fost apelata pentru produsul:"+detalii_comanda.getId());
 
         return  saveddc;
     }
@@ -72,9 +72,9 @@ public class DetaliiComandaServiceImpl implements DetaliiComandaService {
     public void deleteById(long id) {
         Optional<Detalii_comanda> ok=detaliiComandaRepository.findById(id);
         if(!ok.isPresent()){
-            throw new ResourceNotFoundException("Produsul nu exista!");
+            throw new ResourceNotFoundException("Comanda nu exista!");
         }
-        log.info("Metoda deleteById din CosRepository a fost apelata pentru  id-ul:"+id);
+        log.info("Metoda deleteById din ComandaRepository a fost apelata pentru  id-ul:"+id);
 
         detaliiComandaRepository.deleteById(id);
     }

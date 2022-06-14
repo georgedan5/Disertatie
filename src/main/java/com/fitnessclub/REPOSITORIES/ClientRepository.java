@@ -14,7 +14,6 @@ import java.util.List;
 public interface ClientRepository extends JpaRepository<Client, Long> {
 //public interface ClientRepository extends PagingAndSortingRepository <Client,Long> {
 
-   // @Query("select c from Client c where c.Email= ?1")
-   // List<Client> findByEmail(String email);
+
      Client findByEmail(String email);
 }

@@ -26,17 +26,5 @@ public class Cos {
     @ManyToOne
     private Produs produsC;
 
-/*
-    @ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-            },
-            mappedBy = "cosul")
-    private List<Comanda> comandaList;
-
-
- */
-
 
 }

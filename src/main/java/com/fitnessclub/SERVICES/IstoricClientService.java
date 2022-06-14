@@ -13,8 +13,7 @@ public interface IstoricClientService {
     List<Istoric_client> findById(long id);
     Istoric_client save(Istoric_client istoric_client);
     void deleteById(long id);
-   // Page<Istoric_client> findByGreutatea (int pageNumber, String sortField, String sortDirection,long greutatea);
-    ///aici
+
     List<Istoric_client> findByGreutatea(float greutatea);
     List<Istoric_client> findByIdc(long idc);
 

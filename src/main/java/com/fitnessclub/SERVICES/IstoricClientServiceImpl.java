@@ -85,29 +85,9 @@ public class IstoricClientServiceImpl implements IstoricClientService {
 
     @Override
     public void deleteById(long id) {
-        /*
-        Optional<Istoric_client> ok=istoricClientRepository.findById(id);
-        if(!ok.isPresent()){
-            throw new ResourceNotFoundException("Clientul nu exista!");
-        }
-        log.info("Metoda deleteById din ClientRepository a fost apelata pentru clientul cu id-ul:"+id);
 
-        istoricClientRepository.deleteById(id);
-
-         */
-    }
-
-    ///aici
-    /*
-    @Override
-    public List<Istoric_client> findByGreutatea(long greutatea) {
-        List<Istoric_client>  istoricClients=new LinkedList<>();
-        istoricClientRepository.findByGreutatea(greutatea).iterator().forEachRemaining(istoricClients::add);
-
-        return  istoricClients;
     }
 
 
-     */
 
 }

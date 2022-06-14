@@ -64,13 +64,6 @@ public class HomeController {
     @GetMapping("/ContulMeu")
     public String ContulMeu(){ return "contul-meu"; }
 
-/*
-    @GetMapping("/access_denied")
-    public String accessDenied() {
-        throw new AccessDeniedException("You are not authorized to access this page!");
-       // return "access_denied";
-    }
-*/
 
     @RequestMapping({"", "/", "/home"})
     public String Home(Model model){
@@ -88,30 +81,5 @@ public class HomeController {
 
     @GetMapping("/echipa")
     public String Echipa(){ return "echipa"; }
-/*
-    public String listByPage(
-            Model model,
-            @PathVariable("pageNumber") int currentPage,
-            @Param("sortField") String sortField,
-            @Param("sortDirection") String sortDirection)
-    {
-        Page<Product> page= productService.findAll(currentPage,sortField,sortDirection);
-        long totalItems= page.getTotalElements();
-        int totalPages= page.getTotalPages();
-        List<Product> products=page.getContent();
 
-        model.addAttribute("currentPage",currentPage);
-        model.addAttribute("products",products);
-        model.addAttribute("totalItems",totalItems);
-        model.addAttribute("totalPages",totalPages);
-        model.addAttribute("sortField",sortField);
-        model.addAttribute("sortDirection",sortDirection);
-        String reversesortDir=sortDirection.equals("asc") ? "desc" :"asc";
-        model.addAttribute("reversesortDir",reversesortDir);
-
-        return "products";
-
-    }
-
- */
 }

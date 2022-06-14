@@ -26,15 +26,7 @@ public class MesajController {
     MesajService mesajService;
     @Autowired
     ClientRepository clientRepository;
-/*
-    @Autowired
-    public MesajController(MesajService mesajService) {
-        this.mesajService=mesajService;
-    }
 
-
-
- */
     @RequestMapping("/mesaj/list")
     public String mesajList(Model model){
         return listByPage(model,1,"id","asc");

@@ -39,15 +39,7 @@ public class ClientController {
         this.clientRepository=clientRepository;
     }
 
-/*
-   @GetMapping("/cient/name")
-   public ResponseEntity<Client> findByEmail(@RequestParam String name) {
 
-       return new ResponseEntity<Client>(clientRepository.findByEmail(name), HttpStatus.OK);
-   }
-
-
- */
 /*
     @GetMapping("/client/name")
     public void findByEmail(@RequestParam String name) {

@@ -42,23 +42,6 @@ public class ComandaServiceImpl implements ComandaService {
         return comandaRepository.findAll(pageable);
     }
 
-    /*
-    @Override
-    public Page<Comanda> findAll2(int pageNumber, String sortField, String sortDirection) {
-
-        Sort sort=Sort.by(sortField);
-        sort=sortDirection.equals("asc") ? sort.ascending(): sort.descending();
-        Pageable pageable= PageRequest.of(pageNumber-1,5,sort);
-
-        List<Comanda> angajatList=new LinkedList<>();
-        angajatRepository.findAll().iterator().forEachRemaining(angajatList::add);
-        log.info("Metoda findAll din AngajatRepository a fost apelata! ");
-        angajatList.forEach(angajat -> log.info(angajat.getNume()));
-
-        return angajatRepository.findAll(pageable);
-    }
-
-     */
 
     @Override
     public List<Comanda> findAll() {

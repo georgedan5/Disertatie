@@ -72,52 +72,11 @@ public class ComandaController {
         return "comenzi";
     }
 
-/*
-    @RequestMapping("/comanda/list")
-    public String comandaList(Model model){
-        return listByPage(model,1,"id","asc");
-    }
 
-    @GetMapping("/comanda/page/{pageNumber}")
-    public String listByPage(
-            Model model,
-            @PathVariable("pageNumber") int currentPage,
-            @Param("sortField") String sortField,
-            @Param("sortDirection") String sortDirection)
-    {
-            System.out.println("Aoco1");
-        Page<Comanda> page= comandaService.findAll(currentPage,sortField,sortDirection);
-        System.out.println("Aoco22");
-        long totalItems= page.getTotalElements();
-        int totalPages= page.getTotalPages();
-        System.out.println("Aoco23");
-        List<Comanda> com=page.getContent();
-        System.out.println("Aoco2");
-        model.addAttribute("currentPage",currentPage);
-        model.addAttribute("com",com);
-        model.addAttribute("totalItems",totalItems);
-        model.addAttribute("totalPages",totalPages);
-        model.addAttribute("sortField",sortField);
-        System.out.println("Aoco3");
-        model.addAttribute("sortDirection",sortDirection);
-        String reversesortDir=sortDirection.equals("asc") ? "desc" :"asc";
-        model.addAttribute("reversesortDir",reversesortDir);
-        System.out.println("Aoco4");
-        return "comenzi";
-    }
-
-
-
-
- */
     @RequestMapping("/comanda/new")
     public String newComanda(Model model) {
 
         model.addAttribute("comanda", new Comanda());
-        //order-details
-       // List<Cos> coss=cosService.findAll();
-       // model.addAttribute("coss",coss);
-
 
         return "cos-cump";
     }
